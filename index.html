@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Services</title>
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title">
+  </head>
+  <body ng-controller="myCtrl">
+
+    <div class="input-area">
+      <span>Name:</span> <input ng-model="name">
+      <span>Nice Score:</span> <input type="number" ng-model="niceScore">
+      <span>Naughty Score:</span> <input type="number" ng-model="naughtyScore">
+      <button ng-click="addNewPerson()">Add</button>
+    </div>
+
+    <div class="niceList">
+      <h3>Nice People:</h3>
+      <div ng-repeat="person in niceList"> {{ person.name }}
+    </div>
+
+    <div class="naughtyList">
+      <h3>Fun People:</h3>
+      <div ng-repeat="person in naughtyList"> {{ person.name }}
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="ctrl.js" charset="utf-8"></script>
+    <script src="service.js" charset="utf-8"></script>
+  </body>
+</html>
